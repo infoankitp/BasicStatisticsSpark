@@ -19,7 +19,22 @@ conceptually similar to multiple two-sample t-tests, but is more conservative (r
 therefore suited to a wide range of practical problems.
 
 ###### Z-Test
+A Z-test is any statistical test for which the distribution of the test statistic under the null hypothesis can be approximated by a normal distribution. Because of the central limit theorem, many test statistics are approximately normally distributed for large samples. 
 
+The term "Z-test" is often used to refer specifically to the one-sample location test comparing the mean of a set of measurements to a given constant. If the observed data X1, ..., Xn are (i) uncorrelated, (ii) have a common mean μ, and (iii) have a common variance σ2, then the sample average X has mean μ and variance σ2 / n. If our null hypothesis is that the mean value of the population is a given number μ0, we can use X −μ0 as a test-statistic, rejecting the null hypothesis if X − μ0 is large.
 
 ###### T-Test
+A t-test is most commonly applied when the test statistic would follow a normal distribution if the value of a scaling term in the test statistic were known. When the scaling term is unknown and is replaced by an estimate based on the data, the test statistics (under certain conditions) follow a Student's t distribution. The t-test can be used, for example, to determine if two sets of data are significantly different from each other.
+
+A two-sample location test of the null hypothesis such that the means of two populations are equal. All such tests are usually called Student's t-tests, though strictly speaking that name should only be used if the variances of the two populations are also assumed to be equal.
+
+## Usage 
+###### ANOVA
+`` anova(df, continuousFeatureColumnName, categoricalFeatureColumnName) ``
+
+###### Z-Test
+`` zTest(df, continuousFeatureColumnName, categoricalFeatureColumnName) ``
+
+###### T-Test
+`` tTest(df, continuousFeatureColumnName, categoricalFeatureColumnName) ``
 
